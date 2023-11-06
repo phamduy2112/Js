@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display: flex;
+            justify-content: space-around;
+        }
+      .price1{
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+<div class="flex">
+    <div class="left">
+        <div class="price">
+            <div id="price1">
+                1000000-3000000
+            </div>
+            <div id="price2">
+                3000000-5000000
+            </div>
+          
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            <div class="price3">
+                1.000.000đ
+            </div>
+            <div class="price3">
+                3000000
+            </div>
+            <div class="price3">
+                5000000
+            </div>
+            <div class="price3">
+                2000000
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+       let price1=document.querySelector("#price1");
+       let price2=document.querySelector("#price2");
+      
+       function priceTodo(price,min,max){
+
+
+     
+    price.addEventListener('click',()=>{
+        const price3Elements = document.querySelectorAll(".price3");
+        
+        // Lấy tất cả các phần tử có giá trị từ 1 triệu đến 3 triệu
+        const visiblePriceElements = Array.from(price3Elements).filter(priceElement => {
+            const priceValueString = priceElement.textContent.replace(/\./g, "").replace("đ", "");
+            const priceValue = parseFloat(priceValueString);
+            return priceValue >= min && priceValue <= max;
+        });
+
+        // Ẩn tất cả các phần tử .price3
+        price3Elements.forEach(priceElement => {
+            priceElement.style.display = "none";
+        });
+
+        // Hiển thị chỉ những phần tử có giá trị từ 1 triệu đến 3 triệu
+        visiblePriceElements.forEach(visiblePriceElement => {
+            visiblePriceElement.style.display = "block";
+        });
+    });
+  } 
+  priceTodo(price1,1000000,3000000);
+  priceTodo(price2,3000000,5000000);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dom</h1>
+    <div id="special">   
+ <!-- <p class="blue">Here is a paragraph</p>
+    <p class="blue">Here is another paragraph</p> -->
+    <p>Here is not more paragraph</p></div>
+    <form action="">
+        <label for=""><input type="checkbox">yes</label>
+    </form>
+    <script>
+        // ten elements
+        // var myParagraphs=document.getElementsByTagName('p');
+        // console.log(myParagraphs);
+        // tên class
+        // myParagraphs=document.getElementsByClassName("blue")
+    //    vừa có id có class
+        // var myParagraphs=document.querySelectorAll('#special .blue')
+        // for(var i=0;i<myParagraphs.length;i++){
+        //     myParagraphs[i].style.color='blue';
+     
+
+        // }
+        // myParagraphs.style.fontSize='24px'
+        // thêm class
+        // var firstPara=document.querySelector('p');
+        // firstPara.classList="blue";
+        // setAttribute(tên thuộc tính, giá trị); đặt giá trị
+            var checkBox=document.querySelector('input');
+
+            checkBox.setAttribute('checked','checked');
+            // Tạo 1 thuộc tính
+            var add=document.createElement('p');
+            var mySentence=document.createTextNode('second paragraph');
+            myTag.appendChild(mySentence);
+            document.querySelector('#special').appendChild(add);
+    </script>
+</body>
+</html>
