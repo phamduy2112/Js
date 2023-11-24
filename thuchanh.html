@@ -1,0 +1,17 @@
+<body> 
+    <input type="button" value="Click Me" onclick="set_background()"> 
+    <p>Cybersoft JavaScript Exercises</p> 
+    <p>Cybersoft JavaScript Exercises</p> 
+     
+    <script> 
+ function Pet(food, drink) { 
+ this.drink = drink; 
+ this.food = food; 
+} 
+Pet.prototype.getDetail = function () { 
+ return "Food: " + this.food + "\n" + "Drink: " + this.drink; 
+}; 
+const dog = new Pet("Fish", "Milk"); 
+console.log(dog.getDetail());
+    </script> 
+</body>

@@ -72,3 +72,44 @@ a=b=20-15+5;
 console.log(a,b);
 const averageAge=(ageJonas+ageSarah)/2;
 console.log(ageJonas,ageSarah,averageAge);
+// chuyển dữ liệu
+// đang string
+const inputYear='1991';
+// ép chuỗi thành number
+// type conversion
+console.log(Number(inputYear));
+console.log(inputYear+18);
+console.log(Number('Jons')); // NaN là không phải số
+console.log(typeof NaN);
+console.log(String(23),23);
+// type coercion
+// chỉ có dấu + ms có thể + chuỗi còn lại thì bình thường
+console.log('I am '+23 +' years old');
+console.log('I am '+String('23')+' years old');
+console.log('23'-'10'-3);
+console.log('23'*'2');
+console.log('23'/'2');
+let n= '1'+1;
+n=n-1;
+console.log(n);
+// falsy value:0,'',undefined,null,NaN: điều kiện sai
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('undefined'));
+console.log(Boolean({}));
+const money=0;
+if(money){
+    console.log(`don't spend it all`);
+}else{
+    console.log(`You should get a job`);
+}
+let height;
+if(height){
+    console.log('YAY! height is dfefined');
+}else{
+    console.log("Height is undefined");
+}
+const age_person=18;
+if(age_person===18){
+
+}
