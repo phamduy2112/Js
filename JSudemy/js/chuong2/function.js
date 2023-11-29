@@ -33,4 +33,18 @@ function fruitProcessor(apples,oranges){
     const juice=`Juice with ${applePieces} apples and ${orangePieces} oranges`;
     return juice;
 }
+const calcAge=function(birthYeah){
+    return 2037-birthYeah;
+}
 console.log(fruitProcessor(2,3));
+const yearsUnitilRetirement1=function (birthYeah,firtName){
+    const age=calcAge(birthYeah);
+    const retirement=65-age;
+    if(retirement>18){
+        return `${firtName} đã đủ tuổi`
+    }else{
+        return `${firtName} bạn chưa đủ tuổi`
+    }
+    // return `${firtName} có độ tuổi ${retirement}`;
+}
+console.log(yearsUnitilRetirement1(100,'PhamNgocDuy'));
