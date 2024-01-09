@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "image": "",
+      "title": "d",
+      "author": "",
+      "rating": 0,
+      "price": 0,
+      "bestSeller": false,
+      "buyAmount": 0,
+      "id": 2
+    },
+    {
+      "image": "",
+      "title": "",
+      "author": "a",
+      "rating": 0,
+      "price": 0,
+      "bestSeller": false,
+      "buyAmount": 0,
+      "id": 3
+    },
+    {
+      "image": "asd",
+      "title": "23",
+      "author": "5",
+      "rating": 4,
+      "price": 0,
+      "bestSeller": true,
+      "buyAmount": 1,
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

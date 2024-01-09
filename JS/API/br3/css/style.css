@@ -1,0 +1,67 @@
+/*  json place */
+.form-post{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 25px;
+    padding: 50px;
+    margin: 25px auto;
+}
+.form-post input{
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+
+}
+.form-post button{
+    background-color: #6A5Af9;
+    border: 0;
+    color: white;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+.course-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 25px;
+    padding: 25px;
+}
+.course-image{
+    height: 300px;
+}
+.course-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.course-title{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 2.5;
+    font-weight: 600;
+}
+.course-author{
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+.course-best-seller{
+    display: inline-block;
+    padding: 10px 15px;
+    color: #FF6651;
+    background-color: #ff655113;
+}
+.course-meta{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 0 10px;
+}
+.course-erroll{
+    font-size: 13px;
+    color: #999;
+    font-weight: 300;
+}
