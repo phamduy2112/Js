@@ -81,12 +81,76 @@ class PersonCl{
     greet(){
         console.log(`Hey ${this.firstName}`);
     }
+    get age(){
+        return 2037-this.birthYear;
+    }
+    set fullName(name){
+        if(name.includes('')){
+            this._fullName=name;
+        }else{
+            console.log("Day k phai la full name cua ban");
+        }
+    }
+    get fullName(){
+        return this._fullName;
+    }
+    // 
+    static hey(){
+        console.log('he there');
+        console.log(this);
+    }
 }
+
 const jessica=new PersonCl('Jessica',1996)
-console.log(jessica);
+console.log(jessica.fullName);
 jessica.calcAge(); 
 
 // PersonCl.prototype.greet=function(){
 //     console.log(`Hey ${this.firstName}`);
 // }
 jessica.greet();
+
+const account1 = {
+    owner :'jonas',
+    movements :[200,530,120,300],
+    get latest(){
+        return this.movements.slice(-1).pop();
+    },
+    set latest(mov){
+        this.movements.push(mov);
+
+    }
+}
+
+console.log(account1.latest);
+account1.latest=50;
+console.log(account1.movements);
+
+Person.hey=function(){
+    console.log('hey there');
+}
+
+Person.hey();
+PersonCl.hey();
+
+
+const PersonProto={
+    calcAge(){
+        console.log(2037-this.birthYear);
+    },
+    init(firstname,birthYear){
+        this.firstName=firstname;
+        this.birthYear=birthYear;
+    }
+}
+
+const steven=Object.create(PersonProto);
+steven.name='Steven';
+steven.birthYear=2002;
+console.log(steven.__proto__===PersonProto);
+
+const sarah=Object.create(PersonProto);
+
+
+sarah.init('sarah',1979);
+sarah.calcAge();
